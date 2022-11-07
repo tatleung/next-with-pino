@@ -1,34 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Better Logging in Next.js Apps with Pino
 
-## Getting Started
+As the popularity of Next.js increases, so do the size and the complexity of the applications build with it. As season developers can attest, logging can be an extremely helpful tool for isolating problems during development and debugging production problems. The Next.js team recommends Pino for logging for Next.js applications. A good logging solution should support the following features:
 
-First, run the development server:
+1.  ability to set the logging level of each log statement,
+2.  ability to send logging data to various transport targets, eg: console, file, etc.,
+3.  support pretty format during development and JSON format for easy integration with other logging solutions,
+4.  ability to set the logging level of each module/component without modifying the code of the module.
 
-```bash
-npm run dev
-# or
-yarn dev
+The first 3 items in the above list can be easily achieved with Pino. I will present a technique to achieve Item #4 in this article.
+
+## Create the Sample App
+
+
+```
+npx create-next-app next-with-pino --typescript
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The above command creates a new Next.js application for us to demonstrate the logging technique.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Install the Pino Dependencies
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+The following command installs the only dependencies needed in this article:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+```
+npm install pino
+```
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

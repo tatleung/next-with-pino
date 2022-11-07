@@ -27,4 +27,4 @@ The following command installs the only dependencies needed in this article:
 npm install pino
 ```
 
-https://gist.github.com/tatleung/29e66ce732dc3f7a7cb72e529c607bc2
+<script src="https://gist.github.com/tatleung/29e66ce732dc3f7a7cb72e529c607bc2.js"></script>

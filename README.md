@@ -166,4 +166,4 @@ After adding an entry to the `log-level.js` configuration and setting the `hello
 
 Logging is very important during application development and production. Using a couple of simple utility functions, creating loggers and setting logging levels by modules becomes simple. Working on an application with many components, separating logging into modules, and having the ability to control which module we like to hide/show the logs will help us reduce the number of log entries we need to read and improve our productivity.
 
-If you would like to check out the code described in this article, you can clone it from Github.
+If you would like to check out the code described in this article, you can clone it from [Github](https://github.com/tatleung/next-with-pino).
